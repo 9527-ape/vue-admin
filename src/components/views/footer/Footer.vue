@@ -1,35 +1,29 @@
 <template>
+  <div style="padding-bottom: 30px;">
   <el-row>
-    <el-col :span="8">
-      <id id="footerUrl">
-
-    </id>
-  </el-col>
-    <el-col :span="8">
-      <id id="footerUrl">
+    <el-col :span="8" :offset="8">
         <!-- <el-link type="info" href="https://element-plus.org">{{pci}}</el-link> -->
-        <el-text id="url" class="mx-1" type="info" size="large">{{pci}} {{name}}</el-text>
-    </id>
+      <el-row justify="center" style="margin: 5px;">
+          <el-link href="https://beian.miit.gov.cn/" :underline="false" >{{pci}}</el-link>
+          <el-divider direction="vertical" />
+          <el-link href="https://www.beian.gov.cn/portal/index.do" :underline="false" size="large">{{police}}</el-link>
+      </el-row>
+      <el-row justify="center" style="margin: 5px;">
+        <el-text id="url" type="info" >{{name}}</el-text>
+      </el-row>
   </el-col>
-    <el-col :span="8">
-      <id id="footerUrl">
-        
-    </id>
-    </el-col>
   </el-row>
+</div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      name: '2021-2023 ©javautil.cn'
+      name: 'Copyright © 2023 javautil.cn'
       ,pci: '湘ICP备2021019165号'
-      //,name: '2023©javautil.cn'
+      ,police:"公网安备43011102001899号"
     }
   }
 }
-// #footerUrl{
-//   align: center
-// }
 </script>

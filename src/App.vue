@@ -10,9 +10,6 @@ import PageMain from './components/views/main/PageMain.vue'
 <template>
 <div class="common-layout">
     <el-container>
-      <!-- <el-row>
-    <el-col :span="24"><div class="grid-content ep-bg-purple-dark" /></el-col>
-  </el-row> -->
       <el-header id="page_haeder" style="padding: 0px;height: auto;">
         <!-- <HeadList /> -->
         <HeadMemu />
@@ -23,9 +20,12 @@ import PageMain from './components/views/main/PageMain.vue'
         <PageMain/>
       </el-main>
 
+      <el-divider style="margin:24px 20px,24px,20px;"/>
       <el-footer style="padding: 0px;">
+        
         <Footer />
       </el-footer>
+      <el-backtop :right="100" :bottom="100" />
     </el-container>
 </div>
 </template>
